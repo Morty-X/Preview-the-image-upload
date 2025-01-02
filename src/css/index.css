@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html,
+body {
+    background-color: #f3f3f3;
+}
+
+.wrap {
+    margin: auto;
+    width: 450px;
+    height: 600px;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.wrap-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #333;
+}
+
+.wrap-content-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.wrap-content-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+
+.wrap-content-img:hover .mask {
+    display: block;
+}
+
+.mask-operate {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #f20909;
+}
+
+.mask-operate .delImg {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    float: right;
+}
+
+.wrap-content-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap-content-add span {
+    font-size: 30px;
+}
