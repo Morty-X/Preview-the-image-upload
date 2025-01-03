@@ -11,8 +11,9 @@ body {
 }
 
 .wrap {
+    position: relative;
     margin: auto;
-    width: 450px;
+    width: 850px;
     height: 600px;
     padding: 40px 20px;
     background-color: #fff;
@@ -31,8 +32,8 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10px;
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     border: 1px solid #999;
     cursor: pointer;
 }
@@ -43,32 +44,41 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10px;
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     border: 1px solid #999;
     cursor: pointer;
 }
 
 .mask {
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0px;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 30px;
+    height: 100%;
     overflow: hidden;
+    transition: all ease-in 300ms;
+
 }
 
 .wrap-content-img:hover .mask {
-    display: block;
+    opacity: 1;
 }
 
 .mask-operate {
     width: 100%;
     height: 30px;
+    margin-top: 55px;
+    text-align: center;
     line-height: 30px;
-    color: #f20909;
+    color: #fefefe;
+}
+
+.mask-operate span {
+    font-size: 20px;
+    padding: 0 5px;
 }
 
 .mask-operate .delImg {
@@ -85,4 +95,39 @@ body {
 
 .wrap-content-add span {
     font-size: 30px;
+}
+
+/* ===================预览图大图效果========== */
+.bigPreviewImg {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 580px;
+    padding: 0 20px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.bigPreviewImg span {
+    display: block;
+    text-align: right;
+    line-height: 80px;
+    width: 100%;
+    height: 80px;
+    padding-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bigPreviewImg img {
+    margin-left: 50%;
+    width: 450px;
+    height: 450px;
+    margin-top: 8px;
+    transform: translateX(-50%);
 }
